@@ -8,11 +8,15 @@ const htmlRoutes = require("./routing/html-routes");
 
 const PORT = process.env.PORT || 3333
 
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
+
 // Use static pub dir
 app.use(express.static("public"));
 
+
 // Use Api/HTML Routes
-app.use(apiRoutes);
+app.use("/api", apiRoutes);
 app.use(htmlRoutes);
 
 // Prints if server is running
