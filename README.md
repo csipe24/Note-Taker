@@ -8,7 +8,7 @@ As a coder it has been very hectic to write notes and keep them organized! This 
 Use this application for a quick and easy way to write notes, organize notes and access them quickly!
 
 # Preview
-![picture](Assets/terminal.jpg)
+![picture](assets/preview.jpg)
 
 Built With
 Microsoft Visual Studio Code
