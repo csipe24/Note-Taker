@@ -6,7 +6,7 @@ const app = express();
 const apiRoutes = require("./routing/api-routes");
 const htmlRoutes = require("./routing/html-routes");
 
-const PORT = process.env.PORT || 3333
+const PORT = process.env.PORT || 3333;
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
