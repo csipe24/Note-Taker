@@ -5,8 +5,7 @@ Welcome to the express.js note taker application! This node CLI app can be used 
 As a coder it has been very hectic to write notes and keep them organized! This application will allow you to save notes to a server and access them at any time!
 
 # Usage
-Use this application for a quick and easy way to write notes, organize notes and access them quickly!
-
+Use this application for a quick and easy way to write notes, organize notes and access them quickly! This application uses several packages including fs, path, util and uuid!
 # Preview
 ![picture](public/assets/preview.jpg)
 

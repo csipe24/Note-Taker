@@ -4,28 +4,24 @@ const path = require("path");
 const fs = require("fs");
 const store = require("./../db/store.js");
 
-
 // API Routes
 router.get("/notes", (req, res) => {
-    console.log("Read Notes");
     store.getNotes().then((notes)=>{
-        res.json(notes);
+    res.json(notes);
     })
-
 });
 
 router.post("/notes", (req, res) => {
     console.log("Post Notes")
-    store.addNote(req.body).then((notes)=>{
+    store.addNotes(req.body).then((notes)=>{
     res.json(notes);
-    });
-    res.end();
+    })
+    .catch((err)=> res.status(500).json(err));
 });
 
-router.delete("notes:id", (req, res) => {
-    console.log("Deleted Notes");
-
+router.delete("/notes/:id", (req, res) => {
+    console.log(req.params.id);
+    store.deleteNote(req.params.id).then(()=> res.json({ok:true}));
 });
-
 
 module.exports = router;
